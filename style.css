@@ -1,0 +1,265 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* code */
+:root {
+  --white: white;
+  --yellowish: #f7eac5;
+  --wordHoover: #fce38a;
+  --pinky: #f38181;
+}
+
+.banner {
+  background-image: url(./images/background.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  width: 62.5%;
+  margin: 0 auto;
+  color: var(--white);
+}
+header {
+  width: 100%;
+}
+.cap {
+  text-transform: uppercase;
+  font-family: "Montserrat bold", sans-serif;
+}
+
+.mogo {
+  font-family: "Montserrat bold", sans-serif;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.cursive {
+  font-family: "Kaushan Script", cursive;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Montserrat regular", sans-serif;
+  font-size: 0.3rem;
+  margin-right: 0.6rem;
+  /* kaip pasižiūrėti raidžių dydžius */
+}
+nav a:hover {
+  color: var(--wordHoover);
+  border-bottom: 0.9px solid var(--wordHoover);
+  padding-bottom: 2px;
+}
+header div {
+  display: inline-block;
+}
+
+.menu {
+  float: right;
+  /* kaip be float padaryti, jų lygtais negalima naudoti? */
+}
+
+.template {
+  text-align: center;
+  padding-top: 20vh;
+  width: 100%;
+}
+
+.template h3 {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.template h1 {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.template span {
+  display: block;
+  /* labai sumažinus ekraną negražiai centruojasi */
+}
+
+.template hr {
+  width: 14px;
+  /* pagal photoshop paskaiciavus atrodo, kad turėtų būti 60px ant mano ekrano žymiai per didelis*/
+  border: 0.9px solid var(--white);
+  margin-bottom: 1rem;
+}
+
+.template button {
+  background: none;
+  color: var(--white);
+  border: 1px solid var(--white);
+  font-size: 0.3rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.slider {
+  font-size: 0;
+  position: absolute;
+  bottom: 2vh;
+  width: 62.5%;
+  margin: 0 auto;
+}
+
+.slider > div {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  font-size: 0.3rem;
+  color: var(--yellowish);
+  border-top: 0.9px solid var(--yellowish);
+  margin: 0 2.5%;
+  /* pakeisti kad krastutiniai neturėtu margin */
+  padding-top: 0.5rem;
+}
+
+.slider span {
+  font-weight: bold;
+  font-size: 0.4rem;
+}
+
+.slider > div:hover {
+  color: var(--white);
+  border-top: 0.9px solid var(--white);
+  border-image: linear-gradient(
+      to right,
+      var(--pinky) 30%,
+      var(--white) 30%,
+      var(--white) 100%
+    )
+    5;
+}
