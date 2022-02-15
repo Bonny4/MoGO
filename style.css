@@ -1,8 +1,8 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -91,6 +91,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,17 +106,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -123,6 +128,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -134,6 +140,23 @@ table {
   --yellowish: #f7eac5;
   --wordHoover: #fce38a;
   --pinky: #f38181;
+  --grey: #999999;
+  --green: #95e1d3;
+}
+
+.cap {
+  text-transform: uppercase;
+  font-family: "Montserrat bold", sans-serif;
+}
+
+.cursive {
+  font-family: "Kaushan Script", cursive;
+}
+
+.hr-pinky {
+  width: 25px;
+  border: 1px solid var(--pinky);
+  margin: 2rem auto;
 }
 
 .banner {
@@ -146,88 +169,84 @@ table {
   overflow: hidden;
 }
 
-.main {
+.banner .hd-main {
   width: 62.5%;
   margin: 0 auto;
   color: var(--white);
 }
-header {
+
+.banner .hd-main header {
   width: 100%;
 }
-.cap {
-  text-transform: uppercase;
-  font-family: "Montserrat bold", sans-serif;
-}
 
-.mogo {
-  font-family: "Montserrat bold", sans-serif;
-  font-size: 0.6rem;
+.banner .hd-main header .mogo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
-.cursive {
-  font-family: "Kaushan Script", cursive;
-}
-
-nav a {
+.banner .hd-main header nav a {
   text-decoration: none;
   color: var(--white);
-  font-family: "Montserrat regular", sans-serif;
-  font-size: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5rem;
   margin-right: 0.6rem;
-  /* kaip pasižiūrėti raidžių dydžius */
 }
-nav a:hover {
+
+.banner .hd-main header nav a:hover {
   color: var(--wordHoover);
   border-bottom: 0.9px solid var(--wordHoover);
   padding-bottom: 2px;
 }
-header div {
+
+.banner .hd-main header div {
   display: inline-block;
 }
 
-.menu {
+.banner .hd-main header .menu {
   float: right;
   /* kaip be float padaryti, jų lygtais negalima naudoti? */
 }
 
-.template {
+.banner .hd-main .template {
   text-align: center;
   padding-top: 20vh;
   width: 100%;
 }
 
-.template h3 {
-  padding-bottom: 1rem;
-  font-size: 1.5rem;
+.banner .hd-main .template h3 {
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
 
-.template h1 {
+.banner .hd-main .template h1 {
   padding-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
-.template span {
+
+.banner .hd-main .template span {
   display: block;
-  /* labai sumažinus ekraną negražiai centruojasi */
 }
 
-.template hr {
-  width: 14px;
+.banner .hd-main .template hr {
+  width: 25px;
   /* pagal photoshop paskaiciavus atrodo, kad turėtų būti 60px ant mano ekrano žymiai per didelis*/
-  border: 0.9px solid var(--white);
-  margin-bottom: 1rem;
+  border: 1px solid var(--white);
+  margin-bottom: 2rem;
 }
 
-.template button {
+.banner .hd-main .template button {
   background: none;
   color: var(--white);
   border: 1px solid var(--white);
-  font-size: 0.3rem;
-  padding: 0.2rem 0.4rem;
+  font-size: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: 800;
 }
 
-.slider {
+.banner .hd-main .slider {
   font-size: 0;
   position: absolute;
   bottom: 2vh;
@@ -235,31 +254,128 @@ header div {
   margin: 0 auto;
 }
 
-.slider > div {
-  box-sizing: border-box;
+.banner .hd-main .slider div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
   width: 20%;
-  font-size: 0.3rem;
+  font-size: 0.5rem;
   color: var(--yellowish);
-  border-top: 0.9px solid var(--yellowish);
+  border-top: 1.2px solid var(--yellowish);
   margin: 0 2.5%;
   /* pakeisti kad krastutiniai neturėtu margin */
   padding-top: 0.5rem;
 }
 
-.slider span {
+.banner .hd-main .slider div span {
   font-weight: bold;
-  font-size: 0.4rem;
+  font-size: 0.6rem;
 }
 
-.slider > div:hover {
+.banner .hd-main .slider div:hover {
   color: var(--white);
-  border-top: 0.9px solid var(--white);
-  border-image: linear-gradient(
-      to right,
-      var(--pinky) 30%,
-      var(--white) 30%,
-      var(--white) 100%
-    )
-    5;
+  border-top: 1.5px solid var(--white);
+  -o-border-image: linear-gradient(to right, var(--pinky) 30%, var(--white) 30%, var(--white) 100%) 5;
+     border-image: -webkit-gradient(linear, left top, right top, color-stop(30%, var(--pinky)), color-stop(30%, var(--white)), to(var(--white))) 5;
+     border-image: linear-gradient(to right, var(--pinky) 30%, var(--white) 30%, var(--white) 100%) 5;
 }
+
+.main {
+  width: 62.5%;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.main h4 {
+  padding: 1rem;
+}
+
+.main h3 {
+  font-weight: bold;
+}
+
+.main p {
+  font-family: "Roboto", sans-serif;
+  color: var(--grey);
+  font-size: 0.7rem;
+}
+
+.main .photo {
+  margin: 3rem auto;
+  white-space: nowrap;
+}
+
+.main .photo div {
+  display: inline-block;
+  width: 33.3%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .photo div img {
+  display: inline-block;
+  width: 100%;
+}
+
+.main .photo div img .two {
+  padding: 3rem;
+}
+
+.main .photo div img:hover {
+  opacity: 0.5;
+}
+
+.wrapper {
+  background-color: var(--green);
+  margin: 3rem 0;
+}
+
+.wrapper .statistic {
+  width: 62.5%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.wrapper .statistic div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  padding: 1rem;
+}
+
+.wrapper .statistic div .number {
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 0;
+}
+
+.wrapper .statistic div .cap {
+  font-size: 0.5rem;
+}
+
+.main .icons {
+  width: 100%;
+  font-size: 0;
+}
+
+.main .icons .service {
+  display: inline-block;
+  width: 33.3%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.main .icons .service img {
+  display: inline-block;
+  background-color: var(--green);
+}
+
+.main .icons .service .text {
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */

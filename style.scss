@@ -1,0 +1,376 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* code */
+:root {
+  --white: white;
+  --yellowish: #f7eac5;
+  --wordHoover: #fce38a;
+  --pinky: #f38181;
+  --grey: #999999;
+  --green: #95e1d3;
+}
+
+.cap {
+  text-transform: uppercase;
+  font-family: "Montserrat bold", sans-serif;
+}
+
+.cursive {
+  font-family: "Kaushan Script", cursive;
+}
+
+.hr-pinky {
+  width: 25px;
+  border: 1px solid var(--pinky);
+  margin: 2rem auto;
+}
+
+// FRONT PAGE
+
+.banner {
+  background-image: url(./images/background.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  .hd-main {
+    width: 62.5%;
+    margin: 0 auto;
+    color: var(--white);
+    header {
+      width: 100%;
+
+      .mogo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      nav {
+        a {
+          text-decoration: none;
+          color: var(--white);
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.5rem;
+          margin-right: 0.6rem;
+        }
+
+        a:hover {
+          color: var(--wordHoover);
+          border-bottom: 0.9px solid var(--wordHoover);
+          padding-bottom: 2px;
+        }
+      }
+      div {
+        display: inline-block;
+      }
+
+      .menu {
+        float: right;
+        /* kaip be float padaryti, jų lygtais negalima naudoti? */
+      }
+    }
+    .template {
+      text-align: center;
+      padding-top: 20vh;
+      width: 100%;
+      h3 {
+        padding-bottom: 2rem;
+        font-size: 3rem;
+      }
+
+      h1 {
+        padding-bottom: 1rem;
+        font-size: 6rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+
+        //font weight neveikia jei <=700
+      }
+
+      span {
+        display: block;
+      }
+
+      hr {
+        width: 25px;
+        /* pagal photoshop paskaiciavus atrodo, kad turėtų būti 60px ant mano ekrano žymiai per didelis*/
+        border: 1px solid var(--white);
+        margin-bottom: 2rem;
+      }
+
+      button {
+        background: none;
+        color: var(--white);
+        border: 1px solid var(--white);
+        font-size: 0.5rem;
+        padding: 0.3rem 0.6rem;
+        font-weight: 800;
+      }
+    }
+    .slider {
+      font-size: 0;
+      position: absolute;
+      bottom: 2vh;
+      width: 62.5%;
+      margin: 0 auto;
+
+      div {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 20%;
+        font-size: 0.5rem;
+        color: var(--yellowish);
+        border-top: 1.2px solid var(--yellowish);
+        margin: 0 2.5%;
+        /* pakeisti kad krastutiniai neturėtu margin */
+        padding-top: 0.5rem;
+        span {
+          font-weight: bold;
+          font-size: 0.6rem;
+        }
+      }
+      div:hover {
+        color: var(--white);
+        border-top: 1.5px solid var(--white);
+        border-image: linear-gradient(
+            to right,
+            var(--pinky) 30%,
+            var(--white) 30%,
+            var(--white) 100%
+          )
+          5;
+      }
+    }
+  }
+}
+
+// STORY ABOUT US
+
+.main {
+  width: 62.5%;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  h4 {
+    padding: 1rem;
+  }
+  h3 {
+    font-weight: bold;
+  }
+  p {
+    font-family: "Roboto", sans-serif;
+    color: var(--grey);
+    font-size: 0.7rem;
+  }
+  .photo {
+    margin: 3rem auto;
+    white-space: nowrap;
+    div {
+      display: inline-block;
+      width: 33.3%;
+      box-sizing: border-box;
+      img {
+        display: inline-block;
+        width: 100%;
+        .two {
+          padding: 3rem;
+          //neveikia
+        }
+      }
+      img:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// GREEN STATISTICS
+
+.wrapper {
+  background-color: var(--green);
+  margin: 3rem 0;
+  .statistic {
+    width: 62.5%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--white);
+    white-space: nowrap;
+    div {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 20%;
+      padding: 1rem;
+      .number {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        padding: 1rem 0;
+      }
+      .cap {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+// AMAZING SERVICES
+
+.main {
+  .icons {
+    width: 100%;
+    font-size: 0;
+
+    .service {
+      display: inline-block;
+      width: 33.3%;
+      font-size: 1rem;
+      text-align: left;
+
+      img {
+        display: inline-block;
+
+        background-color: var(--green);
+      }
+      .text {
+        display: inline-block;
+      }
+    }
+  }
+}
