@@ -313,22 +313,67 @@ table {
           box-sizing: border-box;
 }
 
+.main .photo div.one, .main .photo div.two, .main .photo div.three {
+  position: relative;
+}
+
+.main .photo div.one .team, .main .photo div.two .team, .main .photo div.three .team {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.main .photo div.one .team .text, .main .photo div.two .team .text, .main .photo div.three .team .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: var(--white);
+  font-size: 0.5rem;
+}
+
+.main .photo div.one:hover .team {
+  opacity: 1;
+}
+
+.main .photo div.one:hover img {
+  opacity: 0.5;
+}
+
+.main .photo div.two:hover .team {
+  opacity: 1;
+}
+
+.main .photo div.two:hover img {
+  opacity: 0.5;
+}
+
+.main .photo div.three:hover .team {
+  opacity: 1;
+}
+
+.main .photo div.three:hover img {
+  opacity: 0.5;
+}
+
 .main .photo div img {
   display: inline-block;
   width: 100%;
 }
 
-.main .photo div img .two {
-  padding: 3rem;
-}
-
-.main .photo div img:hover {
-  opacity: 0.5;
+.main .photo div.two {
+  margin: 0 1rem;
 }
 
 .wrapper {
   background-color: var(--green);
-  margin: 3rem 0;
 }
 
 .wrapper .statistic {
@@ -344,14 +389,14 @@ table {
           box-sizing: border-box;
   display: inline-block;
   width: 20%;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .wrapper .statistic div .number {
   font-weight: bold;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 0;
+  padding-bottom: 0.7rem;
 }
 
 .wrapper .statistic div .cap {
@@ -366,16 +411,62 @@ table {
 .main .icons .service {
   display: inline-block;
   width: 33.3%;
-  font-size: 1rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
 .main .icons .service img {
   display: inline-block;
   background-color: var(--green);
+  vertical-align: top;
+  width: 15%;
+  font-size: 1rem;
 }
 
 .main .icons .service .text {
   display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1rem;
+  width: 85%;
+  font-size: 1rem;
+}
+
+.main .icons .service .text h5 {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  font-size: 0.7rem;
+}
+
+.main .icons .middle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.main .icons .left {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 1rem;
+}
+
+.main .icons .right {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1rem;
+}
+
+.design {
+  height: 80vh;
+  background-color: var(--grey);
+  background-image: url(./images/unique_design_bckgr.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.design .main {
+  padding-top: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
