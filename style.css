@@ -313,19 +313,33 @@ table {
           box-sizing: border-box;
 }
 
+.main .photo div.two {
+  margin: 0 1rem;
+}
+
 .main .photo div.one, .main .photo div.two, .main .photo div.three {
   position: relative;
+}
+
+.main .photo div.one .img-bckg, .main .photo div.two .img-bckg, .main .photo div.three .img-bckg {
+  position: absolute;
+  background-color: var(--green);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .main .photo div.one .team, .main .photo div.two .team, .main .photo div.three .team {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   height: 100%;
   width: 100%;
   opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
+  background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
 }
 
 .main .photo div.one .team .text, .main .photo div.two .team .text, .main .photo div.three .team .text {
@@ -339,37 +353,28 @@ table {
   font-size: 0.5rem;
 }
 
-.main .photo div.one:hover .team {
-  opacity: 1;
-}
-
-.main .photo div.one:hover img {
-  opacity: 0.5;
-}
-
-.main .photo div.two:hover .team {
-  opacity: 1;
-}
-
-.main .photo div.two:hover img {
-  opacity: 0.5;
-}
-
-.main .photo div.three:hover .team {
-  opacity: 1;
-}
-
-.main .photo div.three:hover img {
-  opacity: 0.5;
-}
-
-.main .photo div img {
-  display: inline-block;
+.main .photo div.one img, .main .photo div.two img, .main .photo div.three img {
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.main .photo div.two {
-  margin: 0 1rem;
+.main .photo div.one:hover .team,
+.main .photo div.two:hover .team,
+.main .photo div.three:hover .team,
+.main .photo div.one:hover img,
+.main .photo div.two:hover img,
+.main .photo div.three:hover img {
+  opacity: 1;
+  top: -5%;
+  left: -5%;
+}
+
+.main .photo div.one:hover .img-bckg,
+.main .photo div.two:hover .img-bckg,
+.main .photo div.three:hover .img-bckg {
+  opacity: 1;
 }
 
 .wrapper {
