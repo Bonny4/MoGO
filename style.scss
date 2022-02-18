@@ -302,82 +302,53 @@ table {
   .photo {
     margin: 3rem auto;
     white-space: nowrap;
-    div {
+    width: 100%;
+
+    .two {
+      margin: 0 1rem;
+    }
+    .team {
       display: inline-block;
-      width: 33.3%;
+      width: 33%;
       box-sizing: border-box;
+      position: relative;
 
-      &.two {
-        margin: 0 1rem;
+      img {
+        width: 100%;
+        height: 100%;
       }
-
-      &.one,
-      &.two,
-      &.three {
-        position: relative;
-        .img-bckg {
-          position: absolute;
-          background-color: var(--green);
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          opacity: 0;
-        }
-        .team {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-
-          background: linear-gradient(
-            0deg,
-            rgba(252, 227, 138, 1) 0%,
-            rgba(243, 129, 129, 0.9) 100%
-          );
-
-          .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            color: var(--white);
-            font-size: 0.5rem;
-          }
-          // .img-hover {
-          //   top: 0;
-          //   left: 0;
-          //   height: 100%;
-          //   width: 100%;
-          // }
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          // position: absolute;
-          top: 0;
-          left: 0;
-        }
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        color: var(--white);
+        font-size: 0.5rem;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        //vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+    }
 
-      &.one:hover .team,
-      &.two:hover .team,
-      &.three:hover .team,
-      &.one:hover img,
-      &.two:hover img,
-      &.three:hover img {
-        opacity: 1;
-        top: -5%;
-        left: -5%;
-      }
-      &.one:hover .img-bckg,
-      &.two:hover .img-bckg,
-      &.three:hover .img-bckg {
-        opacity: 1;
-      }
+    .team:hover {
+      top: -200%;
+      //^krc kodel neveikia :((
+      left: -1%;
+      box-shadow: 0.5rem 0.5rem var(--green);
+    }
+
+    .team:hover .text {
+      background: linear-gradient(
+        0deg,
+        rgba(252, 227, 138, 1) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      );
+      opacity: 1;
     }
   }
 }

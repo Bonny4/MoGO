@@ -304,45 +304,27 @@ table {
 .main .photo {
   margin: 3rem auto;
   white-space: nowrap;
+  width: 100%;
 }
 
-.main .photo div {
-  display: inline-block;
-  width: 33.3%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.main .photo div.two {
+.main .photo .two {
   margin: 0 1rem;
 }
 
-.main .photo div.one, .main .photo div.two, .main .photo div.three {
+.main .photo .team {
+  display: inline-block;
+  width: 33%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
 }
 
-.main .photo div.one .img-bckg, .main .photo div.two .img-bckg, .main .photo div.three .img-bckg {
-  position: absolute;
-  background-color: var(--green);
+.main .photo .team img {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
 }
 
-.main .photo div.one .team, .main .photo div.two .team, .main .photo div.three .team {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
-  background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
-}
-
-.main .photo div.one .team .text, .main .photo div.two .team .text, .main .photo div.three .team .text {
+.main .photo .team .text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -351,29 +333,30 @@ table {
   font-weight: bold;
   color: var(--white);
   font-size: 0.5rem;
-}
-
-.main .photo div.one img, .main .photo div.two img, .main .photo div.three img {
+  opacity: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.main .photo div.one:hover .team,
-.main .photo div.two:hover .team,
-.main .photo div.three:hover .team,
-.main .photo div.one:hover img,
-.main .photo div.two:hover img,
-.main .photo div.three:hover img {
-  opacity: 1;
-  top: -5%;
-  left: -5%;
+.main .photo .team:hover {
+  top: -200%;
+  left: -1%;
+  -webkit-box-shadow: 0.5rem 0.5rem var(--green);
+          box-shadow: 0.5rem 0.5rem var(--green);
 }
 
-.main .photo div.one:hover .img-bckg,
-.main .photo div.two:hover .img-bckg,
-.main .photo div.three:hover .img-bckg {
+.main .photo .team:hover .text {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
+  background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
   opacity: 1;
 }
 
