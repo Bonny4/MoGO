@@ -177,6 +177,7 @@ table {
 
 .banner .hd-main header {
   width: 100%;
+  margin-top: 1rem;
 }
 
 .banner .hd-main header .mogo {
@@ -193,10 +194,19 @@ table {
   margin-right: 0.6rem;
 }
 
+.banner .hd-main header nav a img {
+  height: 0.5rem;
+}
+
 .banner .hd-main header nav a:hover {
   color: var(--wordHoover);
   border-bottom: 0.9px solid var(--wordHoover);
   padding-bottom: 2px;
+}
+
+.banner .hd-main header nav a:hover img {
+  -webkit-filter: invert(95%) sepia(22%) saturate(3622%) hue-rotate(303deg) brightness(112%) contrast(121%);
+          filter: invert(95%) sepia(22%) saturate(3622%) hue-rotate(303deg) brightness(112%) contrast(121%);
 }
 
 .banner .hd-main header div {
@@ -305,26 +315,34 @@ table {
   margin: 3rem auto;
   white-space: nowrap;
   width: 100%;
+  height: 100%;
 }
 
 .main .photo .two {
   margin: 0 1rem;
 }
 
-.main .photo .team {
+.main .photo .team-container {
   display: inline-block;
-  width: 33%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 33.3%;
   position: relative;
 }
 
-.main .photo .team img {
+.main .photo .team-container .team {
   width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.main .photo .team .text {
+.main .photo .team-container .team img {
+  aspect-ratio: 1.5;
+  height: 20vh;
+}
+
+.main .photo .team-container .team .text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -347,14 +365,14 @@ table {
           justify-content: center;
 }
 
-.main .photo .team:hover {
-  top: -200%;
-  left: -1%;
+.main .photo .team-container .team:hover {
+  top: 40%;
+  left: 40%;
   -webkit-box-shadow: 0.5rem 0.5rem var(--green);
           box-shadow: 0.5rem 0.5rem var(--green);
 }
 
-.main .photo .team:hover .text {
+.main .photo .team-container .team:hover .text {
   background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
   background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
   opacity: 1;
@@ -405,10 +423,8 @@ table {
 
 .main .icons .service img {
   display: inline-block;
-  background-color: var(--green);
   vertical-align: top;
-  width: 15%;
-  font-size: 1rem;
+  width: 15px;
 }
 
 .main .icons .service .text {
@@ -446,8 +462,7 @@ table {
 }
 
 .design {
-  height: 80vh;
-  background-color: var(--grey);
+  height: 100vh;
   background-image: url(./images/unique_design_bckgr.png);
   background-size: cover;
   background-position: center;
