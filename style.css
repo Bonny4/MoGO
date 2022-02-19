@@ -142,15 +142,21 @@ table {
   --pinky: #f38181;
   --grey: #999999;
   --green: #95e1d3;
+  --darkGrey: #333333;
+  --lightGrey: #cccccc;
 }
 
 .cap {
   text-transform: uppercase;
-  font-family: "Montserrat bold", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cursive {
   font-family: "Kaushan Script", cursive;
+}
+
+.roboto {
+  font-family: "Roboto LightItalic", sans-serif;
 }
 
 .hr-pinky {
@@ -215,7 +221,6 @@ table {
 
 .banner .hd-main header .menu {
   float: right;
-  /* kaip be float padaryti, jų lygtais negalima naudoti? */
 }
 
 .banner .hd-main .template {
@@ -433,13 +438,17 @@ table {
           box-sizing: border-box;
   padding-left: 1rem;
   width: 85%;
-  font-size: 1rem;
 }
 
 .main .icons .service .text h5 {
   font-weight: bold;
   padding-bottom: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+}
+
+.main .icons .service .text p {
+  font-size: 0.6rem;
+  line-height: 1rem;
 }
 
 .main .icons .middle {
@@ -471,5 +480,99 @@ table {
 
 .design .main {
   padding-top: 3rem;
+}
+
+.what-container {
+  width: 100%;
+  margin: 3rem 0;
+  font-size: 0;
+  position: relative;
+}
+
+.what-container .what-photo {
+  display: inline-block;
+  width: 50%;
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+}
+
+.what-container .what-photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.what-container .drop-menu {
+  display: inline-block;
+  width: 50%;
+  font-size: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1rem;
+  position: absolute;
+  overflow: hidden;
+  text-align: left;
+}
+
+.what-container .drop-menu .name-section {
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--lightGrey);
+  padding: 0.5rem 0;
+}
+
+.what-container .drop-menu .name-section label {
+  padding: 0.4rem 0.6rem;
+  color: var(--darkGrey);
+  font-size: 0.5rem;
+}
+
+.what-container .drop-menu .name-section label img {
+  height: 1rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.what-container .drop-menu .name-section p {
+  font-size: 0.6rem;
+  line-height: 1rem;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+.what-container .drop-menu .name-section span {
+  height: 100%;
+  float: right;
+  margin-top: 0.3rem;
+}
+
+.what-container .drop-menu .name-section span img {
+  height: 0.5rem;
+}
+
+.what-container .drop-menu .menu-section ul,
+.what-container .drop-menu .menu-section input,
+.what-container .drop-menu .menu-section .close,
+.what-container .drop-menu .menu-section input:checked ~ .open {
+  display: none;
+}
+
+.what-container .drop-menu .menu-section input:checked ~ ul,
+.what-container .drop-menu .menu-section input:checked ~ .close {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.what-container .drop-menu .menu-section input:checked ~ .close span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.what-container .drop-menu .menu-section input:checked ~ .close {
+  border-bottom: 1px solid var(--lightGrey);
+}
+
+.what-container .drop-menu .menu-section input:checked ~ .name-section {
+  padding-top: 0;
 }
 /*# sourceMappingURL=style.css.map */

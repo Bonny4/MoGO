@@ -142,15 +142,21 @@ table {
   --pinky: #f38181;
   --grey: #999999;
   --green: #95e1d3;
+  --darkGrey: #333333;
+  --lightGrey: #cccccc;
 }
 
 .cap {
   text-transform: uppercase;
-  font-family: "Montserrat bold", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cursive {
   font-family: "Kaushan Script", cursive;
+}
+
+.roboto {
+  font-family: "Roboto LightItalic", sans-serif;
 }
 
 .hr-pinky {
@@ -212,7 +218,6 @@ table {
 
       .menu {
         float: right;
-        /* kaip be float padaryti, jų lygtais negalima naudoti? */
       }
     }
     .template {
@@ -424,11 +429,14 @@ table {
         box-sizing: border-box;
         padding-left: 1rem;
         width: 85%;
-        font-size: 1rem;
         h5 {
           font-weight: bold;
           padding-bottom: 1rem;
-          font-size: 0.7rem;
+          font-size: 0.6rem;
+        }
+        p {
+          font-size: 0.6rem;
+          line-height: 1rem;
         }
       }
     }
@@ -463,3 +471,89 @@ table {
 }
 
 // WHAT WE DO
+
+.what-container {
+  width: 100%;
+  margin: 3rem 0;
+  font-size: 0;
+  position: relative;
+
+  .what-photo {
+    display: inline-block;
+    width: 50%;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .drop-menu {
+    display: inline-block;
+    width: 50%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    .name-section {
+      margin-bottom: 0.5rem;
+      border: 1px solid var(--lightGrey);
+      padding: 0.5rem 0;
+
+      label {
+        padding: 0.4rem 0.6rem;
+        color: var(--darkGrey);
+        font-size: 0.5rem;
+
+        img {
+          height: 1rem;
+          padding-right: 0.5rem;
+          vertical-align: middle;
+        }
+      }
+
+      p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+        font-style: italic;
+        padding: 0.5rem;
+      }
+      span {
+        height: 100%;
+        float: right;
+        margin-top: 0.3rem;
+        img {
+          height: 0.5rem;
+        }
+      }
+    }
+
+    .menu-section ul,
+    .menu-section input,
+    .menu-section .close,
+    .menu-section input:checked ~ .open {
+      display: none;
+    }
+
+    .menu-section input:checked ~ ul,
+    .menu-section input:checked ~ .close {
+      display: block;
+      margin-bottom: 0.5rem;
+      // padding-top: 0;
+    }
+    .menu-section input:checked ~ .close span {
+      transform: rotate(180deg);
+    }
+    .menu-section input:checked ~ .close {
+      border-bottom: 1px solid var(--lightGrey);
+    }
+    .menu-section input:checked ~ .name-section {
+      padding-top: 0;
+    }
+    // ^ paspaudus keičiasi .name-section vieta
+  }
+}
