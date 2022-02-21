@@ -327,12 +327,12 @@ table {
 }
 
 .main .photo .two {
-  margin: 0 1rem;
+  margin: 0 2%;
 }
 
 .main .photo .team-container {
   display: inline-block;
-  width: 33.3%;
+  width: 32%;
   position: relative;
 }
 
@@ -355,10 +355,7 @@ table {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-weight: bold;
-  color: var(--white);
-  font-size: 0.5rem;
-  opacity: 0;
+  opacity: 1;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -370,6 +367,21 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main .photo .team-container .team .text img {
+  width: 2rem;
+  display: block;
+  position: absolute;
+  top: 34%;
+  left: 46%;
+}
+
+.main .photo .team-container .team .text p {
+  display: block;
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 .main .photo .team-container .team:hover {
@@ -597,7 +609,7 @@ table {
 
 .slideshow-container .slides .citation-container img {
   display: inline-block;
-  width: 60px;
+  width: 20%;
   position: absolute;
   left: 0;
   top: 3rem;
@@ -605,7 +617,7 @@ table {
 
 .slideshow-container .slides .citation-container .citation {
   display: inline-block;
-  width: 85%;
+  width: 80%;
   font-size: 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -675,6 +687,7 @@ table {
   color: var(--white);
   font-size: 0.5rem;
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,15 +698,26 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
+  background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
 }
 
-.team .meet-us .text-people .social-icons {
+.team .meet-us .text-people .social-icons-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.team .meet-us .text-people .social-icons-container .social-icons {
   width: 80%;
   font-size: 0;
   border: 0.1px 0 0.1px solid var(--pinky);
+  position: absolute;
+  top: 45%;
+  left: 10%;
 }
 
-.team .meet-us .text-people .social-icons div {
+.team .meet-us .text-people .social-icons-container .social-icons div {
   width: 2rem;
   height: 2rem;
   display: inline-block;
@@ -705,7 +729,7 @@ table {
   border-right: 0.1px solid var(--pinky);
 }
 
-.team .meet-us .text-people .social-icons div img {
+.team .meet-us .text-people .social-icons-container .social-icons div img {
   width: 1rem;
   aspect-ratio: 1;
   -webkit-box-sizing: border-box;
@@ -713,25 +737,25 @@ table {
   padding: autorem;
 }
 
-.team .meet-us .text-people .social-icons div.insta {
+.team .meet-us .text-people .social-icons-container .social-icons div.insta {
   border: none;
 }
 
-.team .meet-us .text-people .social-icons div .fb {
+.team .meet-us .text-people .social-icons-container .social-icons div .fb {
   -webkit-filter: brightness(0) saturate(100%) invert(80%) sepia(23%) saturate(3746%) hue-rotate(304deg) brightness(95%) contrast(101%);
           filter: brightness(0) saturate(100%) invert(80%) sepia(23%) saturate(3746%) hue-rotate(304deg) brightness(95%) contrast(101%);
 }
 
-.team .meet-us .text-people .social-icons div:hover {
+.team .meet-us .text-people .social-icons-container .social-icons div:hover {
   background-color: var(--pinky);
 }
 
-.team .meet-us .text-people .social-icons div:hover img {
+.team .meet-us .text-people .social-icons-container .social-icons div:hover img {
   -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(203%) contrast(503%);
           filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(203%) contrast(503%);
 }
 
-.team .meet-us .text-people .social-icons div:hover .fb {
+.team .meet-us .text-people .social-icons-container .social-icons div:hover .fb {
   -webkit-filter: invert(57%) sepia(58%) saturate(200%) hue-rotate(312deg) brightness(606%) contrast(90%);
           filter: invert(57%) sepia(58%) saturate(200%) hue-rotate(312deg) brightness(606%) contrast(90%);
 }
@@ -756,5 +780,430 @@ table {
 
 .hipster-container .hipster-logos img {
   width: 100%;
+}
+
+.photo-container {
+  margin: 3rem 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.photo-container div {
+  display: inline-block;
+  width: 50%;
+  position: relative;
+}
+
+.photo-container div .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: var(--white);
+  font-size: 0.5rem;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo-container div .content .text {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.photo-container div .content .text .icon {
+  width: 20px;
+}
+
+.photo-container div .content .text h3 {
+  margin: 1rem;
+}
+
+.photo-container div .content .text p {
+  font-style: italic;
+}
+
+.photo-container div img {
+  width: 100%;
+}
+
+.photo-container .photos:hover .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(rgba(243, 129, 129, 0.9)));
+  background: linear-gradient(0deg, #fce38a 0%, rgba(243, 129, 129, 0.9) 100%);
+  opacity: 1;
+}
+
+.photo-container .photos-right {
+  position: relative;
+}
+
+.photo-container .photos-right .photo6,
+.photo-container .photos-right .photo7 {
+  position: absolute;
+}
+
+.photo-container .photos-right .photo7 {
+  top: 50%;
+}
+
+.slide-cont-2 {
+  background: none;
+}
+
+.happy-clients {
+  height: 100vh;
+  background-image: url(./images/what-people-say-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.happy-clients .main {
+  padding-top: 3rem;
+}
+
+.happy-clients .people-say {
+  width: 62.5%;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 0rem;
+  line-height: 1rem;
+}
+
+.happy-clients .people-say .ppl-container {
+  width: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  text-align: left;
+}
+
+.happy-clients .people-say .ppl-container .people-img {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.happy-clients .people-say .ppl-container .people-img img {
+  width: 100%;
+}
+
+.happy-clients .people-say .ppl-container .people-text {
+  display: inline-block;
+  width: 75%;
+  font-size: 0.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1rem;
+}
+
+.happy-clients .people-say .ppl-container .people-text h3 {
+  font-weight: bold;
+}
+
+.happy-clients .people-say .ppl-container .people-text p {
+  padding: 0.5rem 0;
+}
+
+.happy-clients .people-say .ppl-container .people-text .roboto {
+  font-style: italic;
+}
+
+.happy-clients .people-say .ppl-container .people-text .description {
+  font-style: normal;
+  font-size: 0.6rem;
+  color: var(--grey);
+}
+
+.happy-clients .people-say .ppl-container .people-text hr {
+  margin: 0.3rem 0;
+}
+
+.blog-container {
+  font-size: 0;
+}
+
+.blog-container .single-blog {
+  font-size: 1rem;
+  width: 30%;
+  display: inline-block;
+}
+
+.blog-container .single-blog .blog-image {
+  position: relative;
+  width: 100%;
+}
+
+.blog-container .single-blog .blog-image img {
+  width: 100%;
+}
+
+.blog-container .single-blog .blog-image .date {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.5rem 0.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  vertical-align: middle;
+  top: 50%;
+  left: -5%;
+}
+
+.blog-container .single-blog .blog-image .date .cap {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.blog-container .single-blog .blog-image .date .roboto {
+  font-size: 0.7rem;
+  color: var(--white);
+  font-style: italic;
+}
+
+.blog-container .single-blog .blog-text {
+  text-align: left;
+}
+
+.blog-container .single-blog .blog-text h3 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem 0;
+  font-size: 0.6rem;
+}
+
+.blog-container .single-blog .blog-text p {
+  font-size: 0.6rem;
+}
+
+.blog-container .single-blog .blog-text hr {
+  border: 0.1px solid var(--lightGrey);
+}
+
+.blog-container .single-blog .blog-text .stats img {
+  display: inline-block;
+  height: 0.6rem;
+  vertical-align: middle;
+}
+
+.blog-container .single-blog .blog-text .stats p {
+  display: inline-block;
+  color: var(--lightGrey);
+  padding-right: 0.5rem;
+}
+
+.blog-container .blog2 {
+  margin: 0 5%;
+}
+
+.map-background {
+  margin: 3rem 0;
+  width: 100%;
+  background-image: url(./images/open-map-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.map-background .main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.map-background .main img {
+  height: 15px;
+  padding: 1;
+}
+
+.map-background .main .cap {
+  color: var(--pinky);
+  padding: 0.7rem;
+}
+
+.map-background .main hr {
+  margin: 0 auto;
+}
+
+.end-section {
+  font-size: 0;
+  overflow: hidden;
+  text-align: left;
+  padding-top: 0.2rem;
+}
+
+.end-section .mogo-section {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+}
+
+.end-section .mogo-section h1 {
+  color: var(--lightGrey);
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.end-section .mogo-section p {
+  font-size: 0.6rem;
+  margin-top: 2rem;
+}
+
+.end-section .mogo-section .follow {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.end-section .mogo-section .follow span {
+  font-weight: bold;
+  padding-right: 0.2rem;
+}
+
+.end-section .mogo-section hr {
+  border: 0.1px solid var(--lightGrey);
+  margin: 0.3rem 0;
+}
+
+.end-section .mogo-section .follow-social {
+  width: 100%;
+}
+
+.end-section .mogo-section .follow-social p {
+  margin-top: 0;
+  display: inline-block;
+  font-style: italic;
+}
+
+.end-section .mogo-section .follow-social img {
+  padding-left: 1rem;
+  display: inline-block;
+  height: 0.6rem;
+}
+
+.end-section .mogo-section form {
+  padding-top: 2rem;
+}
+
+.end-section .mogo-section form .roboto {
+  font-size: 0.6rem;
+  font-style: italic;
+  padding: 0.5rem;
+  color: var(--lightGrey);
+  border: 0.5px solid var(--lightGrey);
+  width: 45%;
+}
+
+.end-section .mogo-section form .cap {
+  font-weight: bold;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  color: var(--white);
+  border: 0.5px solid var(--green);
+  background-color: var(--green);
+  width: 35%;
+}
+
+.end-section .blogs-section {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 5%;
+  width: 30%;
+}
+
+.end-section .blogs-section .blogs {
+  color: black;
+  font-size: 1;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.end-section .blogs-section .blog-container {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.end-section .blogs-section .blog-container .image {
+  width: 45%;
+  display: inline-block;
+}
+
+.end-section .blogs-section .blog-container .image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.end-section .blogs-section .blog-container .text {
+  width: 55%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.5rem;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.end-section .blogs-section .blog-container .text .roboto {
+  font-style: italic;
+  font-size: 0.5rem;
+}
+
+.end-section .insta-section {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+}
+
+.end-section .insta-section .instagram {
+  color: black;
+  font-size: 1;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.end-section .insta-section img {
+  width: 100%;
+}
+
+.end-section .insta-section .roboto {
+  font-style: italic;
+  font-size: 0.5rem;
+}
+
+.foot-hr {
+  border: 0.1px solid var(--lightGrey);
+  margin: 1rem 0;
+}
+
+.footer p {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.footer p .copyright {
+  font-weight: normal;
+}
+
+.footer p .name {
+  color: var(--pinky);
 }
 /*# sourceMappingURL=style.css.map */
